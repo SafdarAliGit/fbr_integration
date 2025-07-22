@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-07-15 17:39:48.508402",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "request_parametes",
+  "base_url",
+  "auth_token",
+  "timeout",
+  "enable_auto_submit",
+  "column_break_h5m6k",
+  "invoice_settings_section",
+  "seller_business_name",
+  "seller_address",
+  "selle_province",
+  "invoice_type",
+  "tax_rate"
+ ],
+ "fields": [
+  {
+   "default": "https://gw.fbr.gov.pk/di_data/v1/di/",
+   "fieldname": "base_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Base URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "auth_token",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Authorization Token",
+   "reqd": 1
+  },
+  {
+   "default": "30",
+   "fieldname": "timeout",
+   "fieldtype": "Int",
+   "label": "API Timeout (seconds)"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_auto_submit",
+   "fieldtype": "Check",
+   "label": "Enable Auto Submit on Invoice Submit"
+  },
+  {
+   "fieldname": "invoice_settings_section",
+   "fieldtype": "Heading",
+   "label": "Invoice Settings"
+  },
+  {
+   "fieldname": "seller_business_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Seller Business Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "seller_address",
+   "fieldtype": "Data",
+   "label": "Seller Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "selle_province",
+   "fieldtype": "Select",
+   "label": "Selle Province",
+   "options": "Sindh\nPunjab\nBalochistan\nKhyber Pakhtoon Khawa",
+   "reqd": 1
+  },
+  {
+   "description": "1-Sales Invoice\n2-Purchase Invoice\n3-Debit Note",
+   "fieldname": "invoice_type",
+   "fieldtype": "Select",
+   "label": "Invoice Type",
+   "options": "1\n2\n3",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_h5m6k",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_parametes",
+   "fieldtype": "Heading",
+   "label": "Request Parametes"
+  },
+  {
+   "fieldname": "tax_rate",
+   "fieldtype": "Percent",
+   "label": "Tax Rate",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-07-16 10:29:38.564911",
+ "modified_by": "Administrator",
+ "module": "Fbr Integration",
+ "name": "FBR Integration Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
