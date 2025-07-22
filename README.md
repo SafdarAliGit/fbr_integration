@@ -15,3 +15,4 @@ sudo apt install libodbc1 unixodbc
 export LD_LIBRARY_PATH=/path/to/sqlanywhere/lib64:$LD_LIBRARY_PATH
 
 
+# fbr_integration
