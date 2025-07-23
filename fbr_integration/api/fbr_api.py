@@ -65,12 +65,12 @@ class FBRAPI:
         Prepare standardized item data for FBR
         Can be overridden for custom implementations
         """
-        tax_rate = flt(item.tax_rate or self.default_tax_rate)
+        tax_rate = flt(self.default_tax_rate)
         tax_amount = flt(item.amount) * (tax_rate / 100)
         
         return {
-            "hsCode": item.get("hs_code") or "99260000",
-            "productDescription": item.item_name or item.item_code,
+            "hsCode": item.get("hs_code") or "6808",
+            "productDescription": item.description or item.item_name,
             "rate": f"{tax_rate}%",
             "uoM": item.uom or item.stock_uom or "KG",
             "quantity": flt(item.qty),
@@ -94,7 +94,7 @@ class FBRAPI:
         
         return {
             "invoiceType": cint(self.settings.get("invoice_type", 1)),
-            "invoiceDate": invoice_doc.posting_date.strftime("%Y-%m-%d"),
+            "invoiceDate": invoice_doc.posting_date,
             "sellerBusinessName": self.settings.get("seller_business_name"),
             "sellerAddress": self.settings.get("seller_address"),
             "sellerProvince": self.settings.get("seller_province"),
@@ -192,3 +192,4 @@ class FBRAPI:
             frappe.throw("FBR Authorization Token is not configured in Settings")
         if not self.settings.get("seller_business_name"):
             frappe.throw("Seller business name is not configured in Settings")
+

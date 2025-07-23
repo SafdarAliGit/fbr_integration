@@ -16,7 +16,7 @@
   "invoice_settings_section",
   "seller_business_name",
   "seller_address",
-  "selle_province",
+  "seller_province",
   "invoice_type",
   "tax_rate"
  ],
@@ -31,7 +31,7 @@
   },
   {
    "fieldname": "auth_token",
-   "fieldtype": "Password",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Authorization Token",
    "reqd": 1
@@ -67,13 +67,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "selle_province",
-   "fieldtype": "Select",
-   "label": "Selle Province",
-   "options": "Sindh\nPunjab\nBalochistan\nKhyber Pakhtoon Khawa",
-   "reqd": 1
-  },
-  {
    "description": "1-Sales Invoice\n2-Purchase Invoice\n3-Debit Note",
    "fieldname": "invoice_type",
    "fieldtype": "Select",
@@ -95,12 +88,19 @@
    "fieldtype": "Percent",
    "label": "Tax Rate",
    "reqd": 1
+  },
+  {
+   "fieldname": "seller_province",
+   "fieldtype": "Select",
+   "label": "Seller Province",
+   "options": "Sindh\nPunjab\nBalochistan\nKhyber Pakhtoon Khawa",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-07-16 10:29:38.564911",
+ "modified": "2025-07-22 18:09:42.006226",
  "modified_by": "Administrator",
  "module": "Fbr Integration",
  "name": "FBR Integration Settings",
