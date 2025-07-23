@@ -22,7 +22,7 @@
  ],
  "fields": [
   {
-   "default": "https://gw.fbr.gov.pk/di_data/v1/di/",
+   "default": "https://gw.fbr.gov.pk/di_data/v1/di/postinvoicedata_sb",
    "fieldname": "base_url",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -100,7 +100,7 @@
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-07-22 18:09:42.006226",
+ "modified": "2025-07-23 15:53:00.503338",
  "modified_by": "Administrator",
  "module": "Fbr Integration",
  "name": "FBR Integration Settings",

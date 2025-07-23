@@ -15,7 +15,7 @@ class FBRAPI:
         
         # Request parameters with defaults
         self.base_url = (self.settings.get("base_url") or 
-                        "https://gw.fbr.gov.pk/di_data/v1/di/").rstrip('/') + '/'
+                        "https://gw.fbr.gov.pk/di_data/v1/di/postinvoicedata_sb").rstrip('/') + '/'
         self.auth_token = self.settings.get("auth_token")
         self.timeout = cint(self.settings.get("timeout")) or 30
         self.default_tax_rate = flt(self.settings.get("tax_rate"))
@@ -113,7 +113,7 @@ class FBRAPI:
         
         try:
             request_data = self.prepare_request_data(invoice_doc)
-            endpoint = f"{self.base_url}postinvoicedata_sb"
+            endpoint = f"{self.base_url}"
             
             response = requests.post(
                 endpoint,
